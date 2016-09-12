@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #383838;
+    color: white;
+    font-family: Arial, SansSerif;
+}
+
+.wrapper {
+    padding: 20px;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 20px;
+    -webkit-transition-property: background-color;
+    -moz-transition-property: background-color;
+    -o-transition-property: background-color;
+    -ms-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    -ms-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+.box1:hover {
+    background-color: blue;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 20px;
+    border-radius: 0%;
+    transition-property: border-radius, background-color;
+    transition-duration: 1s, 3s;
+    transition-delay: 1s, 2s;
+}
+
+.box2:hover {
+    border-radius: 50%;
+    background-color: orangered;
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 20px;
+    border-radius: 0%;
+    /* Shorthand Property - property duration delay */
+    transition: border-radius 2s 0s, background-color 3s 1s;
+}
+
+.box3:hover {
+    border-radius: 50%;
+    background-color: orangered;
+}
+
+.box4 {
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    margin: 20px;
+    transform: scale(1, 1);
+    /* Shorthand Property - property duration delay */
+    transition: transform 0.5s 0s;
+}
+
+.box4:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.box5 {
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    margin: 20px;
+    transform: translate(0, 0);
+    /* Shorthand Property - property duration delay */
+    transition: transform 3s 0s;
+}
+
+.box5:hover {
+    transform: translate(250px, 0px);
+}
+
+.box6 {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    margin: 20px;
+    transform: translate(0, 0);
+    /* Shorthand Property - property duration delay */
+    transition: transform 3s 0s ease-out;
+}
+
+.box6:hover {
+    transform: translate(250px, 0px);
+}
+
+.box7 {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin: 20px;
+    animation-name: box7opacityanim;
+    animation-duration: 2s;
+    animation-direction: alternate; /* (alternative) gives looping effect and (normal) starts everytime*/
+    animation-iteration-count: 10; /* infinite for continuous */
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+}
+
+
+.box8 {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin: 20px;
+    /* animation name duration delay iternations*/
+    animation: infinite-spinning 2s infinite alternate;
+}
+
+@-webkit-keyframes box7opacityanim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes box7opacityanim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes box7opacityanim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes box7opacityanim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes infinite-spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
